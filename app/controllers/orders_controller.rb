@@ -3,12 +3,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     
-    
-    # @products_ordered = Product.where(id: 1).map {|product| { product:product, quantity: cart[product.id.to_s] } }
-    
     @line_items = LineItem.where(order_id: params[:id])
-    
-    # @line_items = @order.line_items.find(params[:id])
     
   end
 
