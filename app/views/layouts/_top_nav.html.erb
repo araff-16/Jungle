@@ -48,7 +48,7 @@
           <% end %>
         </li>
         <% if current_user %>
-          <li>Signed in as <%= current_user.first_name %> <%= current_user.last_name %> </li>
+          <li class="logindisplay">Signed in as: <%= current_user.first_name %> <%= current_user.last_name %> </li>
           <li>
             <%= link_to 'Logout', session_path(current_user.id), method: :delete %>
           </li>
