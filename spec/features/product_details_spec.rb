@@ -20,12 +20,14 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     visit root_path
 
     first('article header').click
-    puts first('article header').text
+  
 
     #DEBUG / VERIFY
+    sleep(1)
     save_screenshot
     expect(page).to have_current_path('/products/10')
     expect(page).to have_css 'section.products-show'
+   
   end
 
 
